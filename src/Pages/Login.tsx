@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
 import { jwtDecode } from 'jwt-decode';
 import { useState } from 'react';
+import '../assets/css/Login.css';
 
 interface LoginData {
   email: string;
@@ -64,12 +65,14 @@ const Login = () => {
 
   // Add a form element to call handleSubmit
   return (
-    <form onSubmit={handleSubmit}>
-      {/* Add input fields for email and password */}
-      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      <button type="submit">Login</button>
-    </form>
+    <div className="login-container">
+      {/* <form onSubmit={handleSubmit}> */}
+        {/* Add input fields for email and password */}
+        {/* <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        <button type="submit">Login</button> */}
+      {/* </form> */}
+    </div>
   );
 };
 export default Login
